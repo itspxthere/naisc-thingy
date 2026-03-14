@@ -1,0 +1,21 @@
+app = "your-app-name"
+primary_region = "sin"
+
+[build]
+  [build.args]
+    NODE_VERSION = "20"
+
+[env]
+  NODE_ENV = "production"
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
